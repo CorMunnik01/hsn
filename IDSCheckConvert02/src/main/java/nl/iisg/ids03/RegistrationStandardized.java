@@ -1111,7 +1111,7 @@ public class RegistrationStandardized {
     			if(previousMarriage.getHead() == marriage.getHead()){
     				if(Common1.dateIsValid(previousMarriage.getEndDate()) == 0 && Common1.dateIsValid(marriage.getStartDate()) == 0 &&
     				//if(previousMarriage.getEndDate() != null && marriage.getStartDate() != null && 
-    						Utils.dayCount(previousMarriage.getEndDate()) >= Utils.dayCount(marriage.getStartDate()))
+    						Utils.dayCount(previousMarriage.getEndDate()) > Utils.dayCount(marriage.getStartDate()))
     					if(previousMarriage.getSpouse() != null && marriage.getSpouse() != null &&
     							previousMarriage.getSpouse().getPersonID() != marriage.getSpouse().getPersonID())		
     						message("4152", 0, marriage.getHead().getFamilyName() + ", " +  marriage.getHead().getFirstName());
